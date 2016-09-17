@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="utf-8"> 
+    <title>Dom Enhancement-Prepend vs Append childs</title> 
+ <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
+<link rel="stylesheet"  href="styles.css">
+</head>
+<body>
+<header>Prepending and appending of elements in vanilla JS </header>
+<article>	
+<section>
+	<ul>
+     <li>InsertBefore:it is used to insert any child in a parent element before specified child elements(like prependChild in Jquery)</li>
+     <li>appendChild:it is used to append child in any parent element</li>
+     </ul>
+
+</section>
+<Section >
+<div class="code">
+	<a class="jsbin-embed" href="http://jsbin.com/baxovu/embed?html,output">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.39.15"></script>
+</div>
+</Section>
+</article>
+<footer></footer>
+</body>
+<script>
+	/*
+//code kept in js bin
+
+//get reference to element node object
+
+var anchorTag=document.createElement("a");
+
+anchorTag.setAttribute("class","sample");
+
+anchorTag.innerText="link created using js to be inserted before the specific element";
+anchorTag2=anchorTag.cloneNode(true);
+  anchorTag.innerText="link created using js to be inserted after the specific element";
+document.getElementsByTagName("a")[0].classList="class2";
+document.body.insertBefore(anchorTag,document.body.firstChild);
+document.body.appendChild(anchorTag2); */
+</script>
+</html>
+
+
+

@@ -1,0 +1,125 @@
+<html>
+	<head>
+		<style>
+			.tabs-container {
+  background: red;
+  padding: 30px;
+  height: 100%;
+}
+
+.tabs {
+  position: relative;
+  clear: both;
+  margin: 25px 0;
+}
+
+.tab {
+  display: block;
+  width: 220px;
+}
+
+.tab label {
+  background: #eee;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-right: none;
+  margin-left: -1px;
+  position: relative;
+  left: 1px;
+  width: 200px;
+  display: inline-block
+}
+
+.tab [type=radio] {
+  display: none;
+}
+
+.content {
+  position: absolute;
+  top: 0px;
+  left: 220px;
+  background: white;
+  right: 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.content > * {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+
+[type=radio]:checked ~ label {
+  background: white;
+  border-bottom: 1px solid #ccc;
+  z-index: 2;
+}
+
+[type=radio]:checked ~ label ~ .content {
+  z-index: 1;
+}
+
+[type=radio]:checked ~ label ~ .content > * {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+		</style>
+		
+	</head>
+	<body>
+		<div class="tabs-container">
+  <div class="tabs">
+    <!--tabs-->
+    <div class="tab">
+      <input type="radio" id="tab-1" name="tab-group-1" checked="">
+      <label for="tab-1">Tab One</label>
+      <!--tabs-content-->
+      <div class="content">
+        <p>Our expert team allows us to offer Protective Coating services, which is famous for its variety of benefits such as offering universal strainers for light shades, offers breath ability for preventing moisture, curing a tough flexible & abrasion
+          resistant coating, resistant to chalking and flaking and offering strong bonding on cement concrete, asbestos & mild steel. Our range of services finds its application in various areas like chajjas, external vertical walls, china mosaic tiles,
+          water tanks (externally), sloppy roofs, asbestos roof, roof terraces and stone walls. These services consist of acrylic elastomeric dust proof coating and polyurethane waterproof coatings. Protective Coating Our expert team allows us to offer
+          Protective Coating services, which is famous for its variety of benefits such as offering universal strainers for light shades, offers breath ability for preventing moisture, curing a tough flexible & abrasion resistant coating, resistant to
+          chalking and flaking and offering strong bonding on cement concrete, asbestos & mild steel. Our range of services finds its application in various areas like chajjas, external vertical walls, china mosaic tiles, water tanks (externally), sloppy
+          roofs, asbestos roof, roof terraces and stone walls. These services consist of acrylic elastomeric dust proof coating and polyurethane waterproof coatings.</p>
+      </div>
+      <!--tabs-content end-->
+    </div>
+
+    <!--tabs-->
+    <div class="tab">
+      <input type="radio" id="tab-2" name="tab-group-1" checked="">
+      <label for="tab-2">Tab One</label>
+      <!--tabs-content-->
+      <div class="content">
+        <p>Stuff for Tab One</p>
+      </div>
+      <!--tabs-content end-->
+    </div>
+
+    <!--tabs-->
+    <div class="tab">
+      <input type="radio" id="tab-3" name="tab-group-1" checked="">
+      <label for="tab-3">Tab One</label>
+      <!--tabs-content-->
+      <div class="content">
+        <p>Protective Coating
+        </p>
+      </div>
+      <!--tabs-content end-->
+    </div>
+  </div>
+</div>
+	</body>
+</html>

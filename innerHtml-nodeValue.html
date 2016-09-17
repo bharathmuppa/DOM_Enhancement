@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="utf-8"> 
+  <title>Dom Enhancement-innerHtml</title> 
+ <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
+<link rel="stylesheet"  href="styles.css">
+</head>
+<body>
+<header>A sample to demonstrate the innerHtml and NodeValue</header>
+<article> 
+<section>
+  <ul>
+     <li>in Internet Explorer, innerHTML is read-only for COL, COLGROUP, FRAMESET, HEAD, HTML, STYLE, TABLE, TBODY, TFOOT, THEAD, TITLE, TR.<br>
+In IE, innerHTML is read-only for all table tags except TD.   </li>
+     <li>Syntactically, is possible to append to innerHTML with elem.innerHTML += "New text", like below:<pre>
+chatDiv.innerHTML += "image tag here"
+chatDiv.innerHTML += "How you doing?"
+
+But what actually is done:
+
+Old content is wiped
+The new value innerHTML is parsed and inserted.
+The content is not appended, it is re-created. So, all images and other resources will be reloaded after +=, including the smile.gif in the example above.
+
+Fortunately, there are other ways to update content, which make no use of innerHTML and don’t have that issue</pre></li>
+    
+     </ul>
+
+</section>
+<Section>
+<div class="code">
+  <p data-height="265" data-theme-id="0" data-slug-hash="bwZjzo" data-default-tab="html,result" data-user="bharathmuppa" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/bharathmuppa/pen/bwZjzo/">InnerHtml</a> by bharathmuppa (<a href="http://codepen.io/bharathmuppa">@bharathmuppa</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<div>
+</Section>
+<section>
+   <ul>
+     <li>The innerHTML works only for element nodes.</li>
+
+<li>For other types of nodes, there is a nodeValue property, which keeps the content.</li>
+    
+     </ul>
+</section>
+<section>
+  
+  <div class="code">
+ <a class="jsbin-embed" href="http://jsbin.com/qoheza/embed?html,console">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.39.15"></script>
+<div>
+</section>
+</article>
+<footer></footer>
+</body>
+</html>
+

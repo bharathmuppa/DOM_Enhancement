@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="utf-8"> 
+    <title>Dom Enhancement-queryselector vs getElements</title> 
+ <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
+<link rel="stylesheet"  href="styles.css">
+</head>
+<body>
+<header>QuerySelector vs getElement </header>
+<article>	
+<section>
+	<ul>
+     <li>A variable generated with querySelectorAll will contain the elements that fulfilled the selector at the moment the method was called.</li>
+     <li>A variable generated with getElementsByClassName will contain the elements that fulfilled the selector when it is used (that may be different from the moment the method was called). </li>
+     </ul>
+
+</section>
+<Section>
+<div class="code">
+	 <a class="jsbin-embed" href="http://jsbin.com/wanupi/embed?html,js">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.39.15"></script>
+<div>
+</Section>
+</article>
+<footer></footer>
+</body>
+<script>
+/*
+//code kept in js bin
+
+var elems1 = document.getElementsByTagName('a'), // return 1 lements, elems1.length = 2 
+    elems2 = document.querySelectorAll("a");  // return 1 elements, elems2.length = 2 
+//elems1[0].id="sample";
+//console.log(elems2[0].id);
+document.body.appendChild(document.createElement("a")); 
+//elems2 = document.querySelectorAll("a");
+console.log(elems1.length+","+elems2.length); */
+</script>
+</html>
+
+
+
+
+
