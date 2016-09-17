@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"> 
+    <title>Dom Enhancement-Properties vs Attributes</title> 
+ <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
+<link rel="stylesheet"  href="styles.css">
+</head>
+<body>
+<header>Properties and Attributes</header>
+<article>	
+<section>
+	<ul>
+	<li>DOM node is an object. So it can store custom properties and methods just like any JavaScript object.<pre>document.body.myData = { 
+  name: 'John'
+}
+alert(document.body.myData.name) // John
+
+document.body.sayHi = function() { 
+  alert(this.nodeName)
+}
+ 
+document.body.sayHi()  // BODY
+<pre>Custom properties and methods are visible only in JavaScript and don’t affect HTML.</pre></pre></li>
+	<li>DOM nodes provide access to HTML attributes using the following standard methods:
+<pre>
+elem.hasAttribute(name) - checks if the attribute exists
+elem.getAttribute(name) - gets an attribute value
+elem.setAttribute(name, value) - sets an attribute
+elem.removeAttribute(name) - removes an attribute
+</pre></li>
+<li>In contrast with properties, attributes:
+<pre>
+May be only strings.
+Names not case-sensitive, because HTML attributes are not case-sensitive
+They show up in innerHTML (unless it’s older IE)
+You can list all attributes using an array-like attributes property of the element.</pre></li>
+	<ul>
+
+</section>
+<Section>
+<div class="code">
+	<a class="jsbin-embed" href="http://jsbin.com/yezesub/embed?html,js">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.39.15"></script>
+<div>
+</Section>
+<section>
+	<ul>
+	<li>Standard DOM properties are synchronized with attributes.
+	<pre>For example, the browser synchronizes "id" attribute with id property:
+	<pre>
+  document.body.setAttribute('id','la-la-la')
+  alert(document.body.id) // la-la-la
+</pre>
+The synchronization does not guarantee the same value. Let’s set the "href" attribute for example:
+<pre>
+<xmp><a href="/">sample link</a></xmp>
+  var a  = document.body.children[0] 
+
+  a.href = '/'
+  alert( 'attribute:' + a.getAttribute('href') ) // '/'
+  alert( 'property:' + a.href )  // IE: '/', others: full URL
+
+</pre>
+	</pre>
+	</li>
+	<li>There are also built-in properties which are synced one-way only.<pre>
+		<xmp><body>
+  <input type="text" value="markup">
+  <script>
+    var input = document.body.children[0]
+
+    input.setAttribute('value', 'new')
+
+    alert( input.value ) // 'new', input.value changed
+  </script>
+</body></xmp>
+<pre>But the attribute is not synchronized from the property:</pre>
+<xmp>
+	<body>
+  <input type="text" value="markup">
+  <script>
+    var input = document.body.children[0]
+
+    input.value = 'new'
+
+    alert(input.getAttribute('value')) // 'markup', not changed!
+  </script>
+</body>
+</xmp>
+	</pre></li>
+	</ul>
+</section>
+<section>
+
+<ul>
+<li> Play ground is here...</li>
+</ul>
+</section>
+<section>
+	<div class="code">
+	<a class="jsbin-embed" href="http://jsbin.com/riduwi/embed?html,console">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.39.15"></script></div>
+</section>
+</article>
+<footer></footer>
+</body>
+</html>

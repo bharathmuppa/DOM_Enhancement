@@ -11,6 +11,11 @@ p,li,div{
 	font-family: Book Antiqua;
 	font-size:large;
 }
+pre{
+	    background: rgba(86, 180, 239,0.1);
+    width: 80%;
+    padding: 15px;
+}
 body header{
 	font-family: Pacifico;
 	color: rgba(86, 180, 239,0.6);
